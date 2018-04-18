@@ -1,10 +1,15 @@
+/**
+ * Created by gui.zhang on 18/4/18.
+ * Restful演示获取用户信息
+ */
+
 const express = require('express')
 const MongoClient = require('mongodb').MongoClient;
 const bodyParser = require('body-parser')
 const assert = require('assert');
 const app = express()
 //数据库地址
-const DBUrl = 'mongodb://localhost:27017/restful';
+const DBUrl = 'mongodb://127.0.0.1:27017/userForRest';
 //bodyparser设置
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
@@ -46,7 +51,7 @@ MongoClient.connect(DBUrl, (err, db) =>  {
   });
 });
 
-// http://localhost:8989/api/userinfo GET请求
+// http://localhost:4001/restful/userinfo GET请求
 router.get('/userinfo', (req, res) => {
     const findUserinfo = (db, callback) => {
       let   userInfo; 
