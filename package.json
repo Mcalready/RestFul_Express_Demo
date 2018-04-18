@@ -1,0 +1,21 @@
+{
+  "name": "restful",
+  "version": "0.0.1",
+  "description": "nodejs express mongoDB restful",
+  "main": "./server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "solitary.smoke",
+  "license": "MIT",
+  "devDependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "mongodb": "^2.2.33"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "mongodb": "^2.2.33"
+  }
+}
